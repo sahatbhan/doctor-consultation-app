@@ -1,0 +1,6 @@
+meeting title: Date
+ channel: Sarita
+ meeting_subject: Nhi batana
+ start time: 15:47
+ end time: 15:49
+ date: 2023-01-20

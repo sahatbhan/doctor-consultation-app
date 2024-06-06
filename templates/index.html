@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% comment %} <html>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h3 class="mt-5">Your Personal Gym</h3>
+                    <video width="320" height="240" controls>
+                        <source src="movie.mp4" type="video/mp4">
+                    </video>
+                    <video src="{% url 'video_feed' %}" width="20%">
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html> {% endcomment %}
+
+<html>
+    <body>
+        <div class="container" style="width="320" height="240"">
+            <div class="row">
+                <div class="c01-1g-8 offset-lg-2">
+                    <h3 class="mt-S">Live Streaming</h3>
+                    <img src="{% url 'video_feed' %}" width="50%">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

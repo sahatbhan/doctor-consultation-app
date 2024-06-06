@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <style>
+        .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<div class="center" style="background-color:#ECEDED; height:370px;">
+<form class="text-center border border-light p-5" action="success" method="POST">
+
+{% csrf_token %}
+
+    <p class="h3 mb-3" style="color:#12295C; margin-top: 50px;">
+    <i class="fas fa-coffee"></i> Pay for your Meeting
+    </p>
+
+    <p class="mb-3">
+    You will be paying 500 INR
+    </p>
+
+<input type="name" name="name" id="name" required class="form-control mb-4" placeholder="Name">
+
+<!-- RAZORPAY INTEGRATION HERE -->
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="rzp_test_P5uGKApOVIZYNS"
+    data-amount="50000"
+    data-currency="INR"
+    data-order_id="{{payment.id}}"
+    data-buttontext="Pay with Razorpay"
+    data-name="Professional Cipher"
+    data-description="Django and Data Science"
+    data-image="https://example.com/your_logo.jpg"
+    data-prefill.name="PC"
+    data-prefill.email="sarthakcr007@gmail.com"
+    data-theme.color="#ECEDED">
+</script>
+</form>
+</div>
+</div> 
+{% endblock %}
